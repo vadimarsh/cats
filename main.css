@@ -1,0 +1,109 @@
+ /* Общие стили для всего документа */
+ body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(45deg, #f39c12, #b2dfdb);
+    background-size: 200% 200%;
+    animation: gradientAnimation 10s ease infinite;
+    color: #000; /* Черный цвет текста */
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Заголовок */
+header {
+    background: linear-gradient(45deg, #f39c12, #b2dfdb);
+    background-size: 200% 200%;
+    animation: headerGradient 10s ease infinite;
+    color: #000; /* Черный цвет текста */
+    text-align: center;
+    padding: 10px;
+}
+
+h1 {
+    font-size: 40px;
+    padding: 10px;
+}
+
+@keyframes headerGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Основное содержание */
+main {
+    padding: 20px;
+}
+
+.article-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 15px;
+    margin-right: 15px;
+    justify-content: space-between;
+}
+
+.cat-card {
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    
+}
+.cat-description {
+    background-color: #ffc0cb;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    padding: 20px;
+    min-width: 450px;
+    flex-basis: 60%;
+}
+.cat-img{
+    border-radius: 15px;
+    margin-left: 35px;
+    margin-right: 15px;
+    }
+
+h2 {
+    font-size: 24px;
+}
+
+p {
+    font-size: 18px;
+}
+@media screen and (max-width:600px) { 
+    .cat-card {
+        flex-wrap: wrap;
+                   }
+    .cat-description {
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+        flex-grow: 1;
+    }
+    .cat-img{
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-bottom: 20px;
+        flex-grow: 1;
+    }            
+    
+}
